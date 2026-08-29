@@ -116,6 +116,26 @@ def esc(s):
              .replace(",", "\\,").replace("\n", "\\n"))
 
 
+def fold(line):
+    # RFC 5545 : une ligne de contenu ne doit pas dépasser 75 octets ;
+    # au-delà, on la replie avec CRLF + un espace en début de ligne suivante.
+    b = line.encode("utf-8")
+    if len(b) <= 75:
+        return line
+    parts = []
+    i = 0
+    limit = 75
+    while i < len(b):
+        end = min(i + limit, len(b))
+        # ne pas couper au milieu d'un caractère UTF-8 multi-octets
+        while end < len(b) and end > i and (b[end] & 0xC0) == 0x80:
+            end -= 1
+        parts.append(b[i:end].decode("utf-8"))
+        i = end
+        limit = 74  # une ligne de continuation commence par un espace (compté dans les 75)
+    return ("\r\n ").join(parts)
+
+
 def geo_stade(stade):
     # Coordonnées GPS + adresse connue -> LOCATION précis et bouton Itinéraire fiable sur iOS.
     # Repli sur le nom brut si le stade n'est pas dans la table (iOS géocodera le texte,
@@ -139,13 +159,26 @@ def to_ics(events):
               f"SUMMARY:{esc(e['summary'])}",
               f"LOCATION:{esc(location_txt)}"]
         if geo:
-            ev.append(f"GEO:{geo[0]:.6f};{geo[1]:.6f}")
+            lat, lon, addr = geo
+            ev.append(f"GEO:{lat:.6f};{lon:.6f}")
+            # Extension Apple : c'est ce champ qui déclenche la vignette carte + le lien
+            # "Itinéraire" direct (sans passer par le menu contextuel) dans l'app Calendrier iOS.
+            title = e["location"] or addr
+            geouri = f"geo:{lat:.6f},{lon:.6f}"
+            ev.append(
+                "X-APPLE-STRUCTURED-LOCATION"
+                f";VALUE=URI"
+                f";X-ADDRESS={esc(addr)}"
+                f";X-APPLE-RADIUS=100"
+                f";X-TITLE={esc(title)}"
+                f":{geouri}"
+            )
         ev += [f"DESCRIPTION:{esc(e['desc'])}",
                "BEGIN:VALARM", "TRIGGER:-PT1H", "ACTION:DISPLAY",
                "DESCRIPTION:Match AS Monaco dans 1h", "END:VALARM", "END:VEVENT"]
         L += ev
     L.append("END:VCALENDAR")
-    return "\r\n".join(L) + "\r\n"
+    return "\r\n".join(fold(line) for line in L) + "\r\n"
 
 
 def main():
