@@ -21,6 +21,31 @@ UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
 
 COMP = {"L1": "Ligue 1", "UCF": "UEFA Conference League"}
 
+# Coordonnées GPS précises des stades (lat, lon) + adresse complète pour LOCATION.
+# Ça permet à iOS d'ouvrir Plans exactement sur le bon point via la propriété GEO,
+# sans dépendre du géocodage approximatif d'un simple nom de stade.
+STADES = {
+    "Stade Louis-II": (43.727677, 7.415611, "Stade Louis-II, 7 Avenue des Castelans, 98000 Monaco"),
+    "Parc des Princes": (48.841389, 2.253056, "Parc des Princes, 24 Rue du Commandant Guilbaud, 75016 Paris"),
+    "Stade de la Meinau": (48.559722, 7.755556, "Stade de la Meinau, 12 Rue de l'Extenwoerth, 67100 Strasbourg"),
+    "Stade du Moustoir - Yves Allainmat": (47.734444, -3.373889, "Stade du Moustoir, Boulevard Léo Le Bourgo, 56100 Lorient"),
+    "Stade Jean Bouin": (48.841944, 2.253333, "Stade Jean-Bouin, 26 Avenue du Général Sarrail, 75016 Paris"),
+    "Stade Marie-Marvingt": (47.999722, 0.204722, "Stade Marie-Marvingt, Avenue Pierre de Coubertin, 72100 Le Mans"),
+    "Stade de l'Abbé Deschamps": (47.792778, 3.566389, "Stade de l'Abbé-Deschamps, 4 Boulevard de Verdun, 89000 Auxerre"),
+    "Groupama Stadium": (45.765278, 4.982083, "Groupama Stadium, 10 Avenue Simone Veil, 69150 Décines-Charpieu"),
+    "Stade de l'Aube": (48.309167, 4.091389, "Stade de l'Aube, 12 Boulevard Vitry, 10000 Troyes"),
+    "Stade Brestois 29": (48.404722, -4.475556, "Stade Francis-Le Blé, 2 Rue de Quimper, 29200 Brest"),
+    "Stade Francis-Le Blé": (48.404722, -4.475556, "Stade Francis-Le Blé, 2 Rue de Quimper, 29200 Brest"),
+    "Stade Rennais FC": (48.107500, -1.712778, "Roazhon Park, Route de Lorient, 35000 Rennes"),
+    "Roazhon Park": (48.107500, -1.712778, "Roazhon Park, Route de Lorient, 35000 Rennes"),
+    "Orange Vélodrome": (43.269722, 5.395833, "Orange Vélodrome, 3 Boulevard Michelet, 13008 Marseille"),
+    "Stade Raymond Kopa": (47.464722, -0.523889, "Stade Raymond-Kopa, Rue de la Rabière, 49000 Angers"),
+    "Decathlon Arena - Stade Pierre-Mauroy": (50.611944, 3.130556, "Decathlon Arena - Stade Pierre-Mauroy, 261 Boulevard de Tournai, 59650 Villeneuve-d'Ascq"),
+    "Stadium de Toulouse": (43.583056, 1.434167, "Stadium de Toulouse, 1 Allée Gabriel Tinaud, 31400 Toulouse"),
+    "Allianz Riviera": (43.705278, 7.192500, "Allianz Riviera, Boulevard des Jardiniers, 06200 Nice"),
+    "Stade Bollaert-Delelis": (50.432500, 2.815278, "Stade Bollaert-Delelis, 27 Rue Georges Berne, 62300 Lens"),
+}
+
 CARD_RE = re.compile(r'data-component="MatchPresentationCard".*?</nxp-full-countdown>?.*?matchPresCardTeams.*?(?=data-component="MatchPresentationCard"|matchPresCardList|</ul>|$)', re.S)
 
 
@@ -91,12 +116,11 @@ def esc(s):
              .replace(",", "\\,").replace("\n", "\\n"))
 
 
-def itineraire_urls(stade):
-    # Plans (Apple Maps) en priorité, Google Maps en repli.
-    q = urllib.parse.quote(stade)
-    apple = f"https://maps.apple.com/?q={q}"
-    google = f"https://www.google.com/maps/search/?api=1&query={q}"
-    return apple, google
+def geo_stade(stade):
+    # Coordonnées GPS + adresse connue -> LOCATION précis et bouton Itinéraire fiable sur iOS.
+    # Repli sur le nom brut si le stade n'est pas dans la table (iOS géocodera le texte,
+    # Plans en priorité, sinon Google/autre selon les réglages du téléphone).
+    return STADES.get(stade)
 
 
 def to_ics(events):
@@ -107,18 +131,19 @@ def to_ics(events):
          "X-PUBLISHED-TTL:PT12H"]
     for e in events:
         s = e["start"]; end = s + dt.timedelta(hours=2)
-        desc = e["desc"]
-        if e["location"]:
-            apple, google = itineraire_urls(e["location"])
-            desc += f"\nItinéraire (Plans) : {apple}\nItinéraire (Google Maps) : {google}"
-        L += ["BEGIN:VEVENT", f"UID:{e['uid']}", f"DTSTAMP:{now}",
+        geo = geo_stade(e["location"])
+        location_txt = geo[2] if geo else e["location"]
+        ev = ["BEGIN:VEVENT", f"UID:{e['uid']}", f"DTSTAMP:{now}",
               f"DTSTART;TZID={TZ}:{s.strftime('%Y%m%dT%H%M%S')}",
               f"DTEND;TZID={TZ}:{end.strftime('%Y%m%dT%H%M%S')}",
               f"SUMMARY:{esc(e['summary'])}",
-              f"LOCATION:{esc(e['location'])}",
-              f"DESCRIPTION:{esc(desc)}",
-              "BEGIN:VALARM", "TRIGGER:-PT1H", "ACTION:DISPLAY",
-              "DESCRIPTION:Match AS Monaco dans 1h", "END:VALARM", "END:VEVENT"]
+              f"LOCATION:{esc(location_txt)}"]
+        if geo:
+            ev.append(f"GEO:{geo[0]:.6f};{geo[1]:.6f}")
+        ev += [f"DESCRIPTION:{esc(e['desc'])}",
+               "BEGIN:VALARM", "TRIGGER:-PT1H", "ACTION:DISPLAY",
+               "DESCRIPTION:Match AS Monaco dans 1h", "END:VALARM", "END:VEVENT"]
+        L += ev
     L.append("END:VCALENDAR")
     return "\r\n".join(L) + "\r\n"
 
