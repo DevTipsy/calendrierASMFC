@@ -161,18 +161,6 @@ def to_ics(events):
         if geo:
             lat, lon, addr = geo
             ev.append(f"GEO:{lat:.6f};{lon:.6f}")
-            # Extension Apple : c'est ce champ qui déclenche la vignette carte + le lien
-            # "Itinéraire" direct (sans passer par le menu contextuel) dans l'app Calendrier iOS.
-            title = e["location"] or addr
-            geouri = f"geo:{lat:.6f},{lon:.6f}"
-            ev.append(
-                "X-APPLE-STRUCTURED-LOCATION"
-                f";VALUE=URI"
-                f";X-ADDRESS={esc(addr)}"
-                f";X-APPLE-RADIUS=100"
-                f";X-TITLE={esc(title)}"
-                f":{geouri}"
-            )
         ev += [f"DESCRIPTION:{esc(e['desc'])}",
                "BEGIN:VALARM", "TRIGGER:-PT1H", "ACTION:DISPLAY",
                "DESCRIPTION:Match AS Monaco dans 1h", "END:VALARM", "END:VEVENT"]
