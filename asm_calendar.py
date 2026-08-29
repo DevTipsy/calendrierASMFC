@@ -171,6 +171,17 @@ def to_ics(events):
         if geo:
             lat, lon, addr = geo
             ev.append(f"GEO:{lat:.6f};{lon:.6f}")
+            # Variante sans X-ADDRESS : documentée comme nécessaire pour que Calendar.app
+            # accepte X-APPLE-STRUCTURED-LOCATION quand la localisation n'est pas une adresse
+            # de rue "point unique" (cf. sebbo2002/ical-generator#236). Le titre complet
+            # (stade + ville) remplace l'adresse manquante.
+            ev.append(
+                "X-APPLE-STRUCTURED-LOCATION"
+                f";VALUE=URI"
+                f";X-APPLE-RADIUS=70"
+                f";X-TITLE={esc(location_txt)}"
+                f":geo:{lat:.6f},{lon:.6f}"
+            )
         ev += [f"DESCRIPTION:{esc(e['desc'])}",
                "BEGIN:VALARM", "TRIGGER:-PT1H", "ACTION:DISPLAY",
                "DESCRIPTION:Match AS Monaco dans 1h", "END:VALARM", "END:VEVENT"]
