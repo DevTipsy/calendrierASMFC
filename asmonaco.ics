@@ -9,12 +9,12 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:69fe5edd6ff84a1ad5d0ea4aee7b2849@asmonaco
-DTSTAMP:20260829T110324Z
+DTSTAMP:20260829T113554Z
 DTSTART;TZID=Europe/Paris:20260830T204500
 DTEND;TZID=Europe/Paris:20260830T224500
 SUMMARY:AS Monaco vs O. Marseille
 LOCATION:Stade Louis-II
-DESCRIPTION:Ligue 1 McDonald's - Journée 2
+DESCRIPTION:Ligue 1 McDonald's - Journée 2\nItinéraire (Plans) : https://maps.apple.com/?q=Stade%20Louis-II\nItinéraire (Google Maps) : https://www.google.com/maps/search/?api=1&query=Stade%20Louis-II
 BEGIN:VALARM
 TRIGGER:-PT1H
 ACTION:DISPLAY
@@ -23,12 +23,12 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:95a858606353aa4108e0738399fca08b@asmonaco
-DTSTAMP:20260829T110324Z
+DTSTAMP:20260829T113554Z
 DTSTART;TZID=Europe/Paris:20260904T210500
 DTEND;TZID=Europe/Paris:20260904T230500
 SUMMARY:Paris Saint Germain vs AS Monaco
 LOCATION:Parc des Princes
-DESCRIPTION:Ligue 1 McDonald's - Journée 3
+DESCRIPTION:Ligue 1 McDonald's - Journée 3\nItinéraire (Plans) : https://maps.apple.com/?q=Parc%20des%20Princes\nItinéraire (Google Maps) : https://www.google.com/maps/search/?api=1&query=Parc%20des%20Princes
 BEGIN:VALARM
 TRIGGER:-PT1H
 ACTION:DISPLAY
@@ -37,12 +37,12 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:b476b9ad4e97b3ade748761c19bec047@asmonaco
-DTSTAMP:20260829T110324Z
+DTSTAMP:20260829T113554Z
 DTSTART;TZID=Europe/Paris:20260912T171500
 DTEND;TZID=Europe/Paris:20260912T191500
 SUMMARY:RC Strasbourg vs AS Monaco
 LOCATION:Stade de la Meinau
-DESCRIPTION:Ligue 1 McDonald's - Journée 4
+DESCRIPTION:Ligue 1 McDonald's - Journée 4\nItinéraire (Plans) : https://maps.apple.com/?q=Stade%20de%20la%20Meinau\nItinéraire (Google Maps) : https://www.google.com/maps/search/?api=1&query=Stade%20de%20la%20Meinau
 BEGIN:VALARM
 TRIGGER:-PT1H
 ACTION:DISPLAY
@@ -51,12 +51,12 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:5988147b063ec22fed799e8c3b3d637f@asmonaco
-DTSTAMP:20260829T110324Z
+DTSTAMP:20260829T113554Z
 DTSTART;TZID=Europe/Paris:20260919T200000
 DTEND;TZID=Europe/Paris:20260919T220000
 SUMMARY:AS Monaco vs RC Lens
 LOCATION:Stade Louis-II
-DESCRIPTION:Ligue 1 McDonald's - Journée 5
+DESCRIPTION:Ligue 1 McDonald's - Journée 5\nItinéraire (Plans) : https://maps.apple.com/?q=Stade%20Louis-II\nItinéraire (Google Maps) : https://www.google.com/maps/search/?api=1&query=Stade%20Louis-II
 BEGIN:VALARM
 TRIGGER:-PT1H
 ACTION:DISPLAY
@@ -65,12 +65,12 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:c3b5bbc6d90d3ea71406e7ca681c0bf0@asmonaco
-DTSTAMP:20260829T110324Z
+DTSTAMP:20260829T113554Z
 DTSTART;TZID=Europe/Paris:20261010T200000
 DTEND;TZID=Europe/Paris:20261010T220000
 SUMMARY:AS Monaco vs Toulouse FC
 LOCATION:Stade Louis-II
-DESCRIPTION:Ligue 1 McDonald's - Journée 6
+DESCRIPTION:Ligue 1 McDonald's - Journée 6\nItinéraire (Plans) : https://maps.apple.com/?q=Stade%20Louis-II\nItinéraire (Google Maps) : https://www.google.com/maps/search/?api=1&query=Stade%20Louis-II
 BEGIN:VALARM
 TRIGGER:-PT1H
 ACTION:DISPLAY
@@ -79,12 +79,12 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:e030f0e9284b10f47ef36dc8e096adf6@asmonaco
-DTSTAMP:20260829T110324Z
+DTSTAMP:20260829T113554Z
 DTSTART;TZID=Europe/Paris:20261017T200000
 DTEND;TZID=Europe/Paris:20261017T220000
 SUMMARY:FC Lorient vs AS Monaco
 LOCATION:Stade du Moustoir - Yves Allainmat
-DESCRIPTION:Ligue 1 McDonald's - Journée 7
+DESCRIPTION:Ligue 1 McDonald's - Journée 7\nItinéraire (Plans) : https://maps.apple.com/?q=Stade%20du%20Moustoir%20-%20Yves%20Allainmat\nItinéraire (Google Maps) : https://www.google.com/maps/search/?api=1&query=Stade%20du%20Moustoir%20-%20Yves%20Allainmat
 BEGIN:VALARM
 TRIGGER:-PT1H
 ACTION:DISPLAY
@@ -93,12 +93,12 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:0cfed4a229e99d3c16944eef78d2b1fd@asmonaco
-DTSTAMP:20260829T110324Z
+DTSTAMP:20260829T113554Z
 DTSTART;TZID=Europe/Paris:20261024T200000
 DTEND;TZID=Europe/Paris:20261024T220000
 SUMMARY:AS Monaco vs Lille OSC
 LOCATION:Stade Louis-II
-DESCRIPTION:Ligue 1 McDonald's - Journée 8
+DESCRIPTION:Ligue 1 McDonald's - Journée 8\nItinéraire (Plans) : https://maps.apple.com/?q=Stade%20Louis-II\nItinéraire (Google Maps) : https://www.google.com/maps/search/?api=1&query=Stade%20Louis-II
 BEGIN:VALARM
 TRIGGER:-PT1H
 ACTION:DISPLAY
@@ -107,12 +107,12 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2e5b28d7ddc157531d6caff6c4d297d8@asmonaco
-DTSTAMP:20260829T110324Z
+DTSTAMP:20260829T113554Z
 DTSTART;TZID=Europe/Paris:20261031T200000
 DTEND;TZID=Europe/Paris:20261031T220000
 SUMMARY:Paris FC vs AS Monaco
 LOCATION:Stade Jean Bouin
-DESCRIPTION:Ligue 1 McDonald's - Journée 9
+DESCRIPTION:Ligue 1 McDonald's - Journée 9\nItinéraire (Plans) : https://maps.apple.com/?q=Stade%20Jean%20Bouin\nItinéraire (Google Maps) : https://www.google.com/maps/search/?api=1&query=Stade%20Jean%20Bouin
 BEGIN:VALARM
 TRIGGER:-PT1H
 ACTION:DISPLAY
@@ -121,12 +121,12 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2cd1d9bf5713393b42ddaf8dfe83f568@asmonaco
-DTSTAMP:20260829T110324Z
+DTSTAMP:20260829T113554Z
 DTSTART;TZID=Europe/Paris:20261107T200000
 DTEND;TZID=Europe/Paris:20261107T220000
 SUMMARY:Le Mans FC vs AS Monaco
 LOCATION:Stade Marie-Marvingt
-DESCRIPTION:Ligue 1 McDonald's - Journée 10
+DESCRIPTION:Ligue 1 McDonald's - Journée 10\nItinéraire (Plans) : https://maps.apple.com/?q=Stade%20Marie-Marvingt\nItinéraire (Google Maps) : https://www.google.com/maps/search/?api=1&query=Stade%20Marie-Marvingt
 BEGIN:VALARM
 TRIGGER:-PT1H
 ACTION:DISPLAY
@@ -135,12 +135,12 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2c01651b4dafd3e5128e1641322ded12@asmonaco
-DTSTAMP:20260829T110324Z
+DTSTAMP:20260829T113554Z
 DTSTART;TZID=Europe/Paris:20261121T200000
 DTEND;TZID=Europe/Paris:20261121T220000
 SUMMARY:AS Monaco vs AJ Auxerre
 LOCATION:Stade Louis-II
-DESCRIPTION:Ligue 1 McDonald's - Journée 11
+DESCRIPTION:Ligue 1 McDonald's - Journée 11\nItinéraire (Plans) : https://maps.apple.com/?q=Stade%20Louis-II\nItinéraire (Google Maps) : https://www.google.com/maps/search/?api=1&query=Stade%20Louis-II
 BEGIN:VALARM
 TRIGGER:-PT1H
 ACTION:DISPLAY
@@ -149,12 +149,12 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:bef86d7b6df2e6defde8e65d510b622a@asmonaco
-DTSTAMP:20260829T110324Z
+DTSTAMP:20260829T113554Z
 DTSTART;TZID=Europe/Paris:20261128T200000
 DTEND;TZID=Europe/Paris:20261128T220000
 SUMMARY:O. Lyonnais vs AS Monaco
 LOCATION:Groupama Stadium
-DESCRIPTION:Ligue 1 McDonald's - Journée 12
+DESCRIPTION:Ligue 1 McDonald's - Journée 12\nItinéraire (Plans) : https://maps.apple.com/?q=Groupama%20Stadium\nItinéraire (Google Maps) : https://www.google.com/maps/search/?api=1&query=Groupama%20Stadium
 BEGIN:VALARM
 TRIGGER:-PT1H
 ACTION:DISPLAY
@@ -163,12 +163,12 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:ce13c430ec5ed0617704e5d9c352f56c@asmonaco
-DTSTAMP:20260829T110324Z
+DTSTAMP:20260829T113554Z
 DTSTART;TZID=Europe/Paris:20261205T200000
 DTEND;TZID=Europe/Paris:20261205T220000
 SUMMARY:AS Monaco vs Angers SCO
 LOCATION:Stade Louis-II
-DESCRIPTION:Ligue 1 McDonald's - Journée 13
+DESCRIPTION:Ligue 1 McDonald's - Journée 13\nItinéraire (Plans) : https://maps.apple.com/?q=Stade%20Louis-II\nItinéraire (Google Maps) : https://www.google.com/maps/search/?api=1&query=Stade%20Louis-II
 BEGIN:VALARM
 TRIGGER:-PT1H
 ACTION:DISPLAY
@@ -177,12 +177,12 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:6385c024296fff0ded2a0805db7e3a0a@asmonaco
-DTSTAMP:20260829T110324Z
+DTSTAMP:20260829T113554Z
 DTSTART;TZID=Europe/Paris:20261212T200000
 DTEND;TZID=Europe/Paris:20261212T220000
 SUMMARY:Stade Rennais FC vs AS Monaco
 LOCATION:Roazhon Park
-DESCRIPTION:Ligue 1 McDonald's - Journée 14
+DESCRIPTION:Ligue 1 McDonald's - Journée 14\nItinéraire (Plans) : https://maps.apple.com/?q=Roazhon%20Park\nItinéraire (Google Maps) : https://www.google.com/maps/search/?api=1&query=Roazhon%20Park
 BEGIN:VALARM
 TRIGGER:-PT1H
 ACTION:DISPLAY
@@ -191,12 +191,12 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:b2de249cbb94ee738eac2b2bf5d00de8@asmonaco
-DTSTAMP:20260829T110324Z
+DTSTAMP:20260829T113554Z
 DTSTART;TZID=Europe/Paris:20270102T200000
 DTEND;TZID=Europe/Paris:20270102T220000
 SUMMARY:AS Monaco vs OGC Nice
 LOCATION:Stade Louis-II
-DESCRIPTION:Ligue 1 McDonald's - Journée 15
+DESCRIPTION:Ligue 1 McDonald's - Journée 15\nItinéraire (Plans) : https://maps.apple.com/?q=Stade%20Louis-II\nItinéraire (Google Maps) : https://www.google.com/maps/search/?api=1&query=Stade%20Louis-II
 BEGIN:VALARM
 TRIGGER:-PT1H
 ACTION:DISPLAY
@@ -205,12 +205,12 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f98edbb8ad330eabeabf220552e54dcd@asmonaco
-DTSTAMP:20260829T110324Z
+DTSTAMP:20260829T113554Z
 DTSTART;TZID=Europe/Paris:20270116T200000
 DTEND;TZID=Europe/Paris:20270116T220000
 SUMMARY:AS Monaco vs Stade Brestois 29
 LOCATION:Stade Louis-II
-DESCRIPTION:Ligue 1 McDonald's - Journée 16
+DESCRIPTION:Ligue 1 McDonald's - Journée 16\nItinéraire (Plans) : https://maps.apple.com/?q=Stade%20Louis-II\nItinéraire (Google Maps) : https://www.google.com/maps/search/?api=1&query=Stade%20Louis-II
 BEGIN:VALARM
 TRIGGER:-PT1H
 ACTION:DISPLAY
@@ -219,12 +219,12 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:7f42537f781356f8f8471093032df01e@asmonaco
-DTSTAMP:20260829T110324Z
+DTSTAMP:20260829T113554Z
 DTSTART;TZID=Europe/Paris:20270123T200000
 DTEND;TZID=Europe/Paris:20270123T220000
 SUMMARY:Estac Troyes vs AS Monaco
 LOCATION:Stade de l'Aube
-DESCRIPTION:Ligue 1 McDonald's - Journée 17
+DESCRIPTION:Ligue 1 McDonald's - Journée 17\nItinéraire (Plans) : https://maps.apple.com/?q=Stade%20de%20l%27Aube\nItinéraire (Google Maps) : https://www.google.com/maps/search/?api=1&query=Stade%20de%20l%27Aube
 BEGIN:VALARM
 TRIGGER:-PT1H
 ACTION:DISPLAY
@@ -233,12 +233,12 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:9404b36a4cda98f16f6fabbb33dec72a@asmonaco
-DTSTAMP:20260829T110324Z
+DTSTAMP:20260829T113554Z
 DTSTART;TZID=Europe/Paris:20270130T200000
 DTEND;TZID=Europe/Paris:20270130T220000
 SUMMARY:AS Monaco vs Paris Saint Germain
 LOCATION:Stade Louis-II
-DESCRIPTION:Ligue 1 McDonald's - Journée 18
+DESCRIPTION:Ligue 1 McDonald's - Journée 18\nItinéraire (Plans) : https://maps.apple.com/?q=Stade%20Louis-II\nItinéraire (Google Maps) : https://www.google.com/maps/search/?api=1&query=Stade%20Louis-II
 BEGIN:VALARM
 TRIGGER:-PT1H
 ACTION:DISPLAY
@@ -247,12 +247,12 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:a0561351f8475f3361a447a121dda5e4@asmonaco
-DTSTAMP:20260829T110324Z
+DTSTAMP:20260829T113554Z
 DTSTART;TZID=Europe/Paris:20270206T200000
 DTEND;TZID=Europe/Paris:20270206T220000
 SUMMARY:AJ Auxerre vs AS Monaco
 LOCATION:Stade de l'Abbé Deschamps
-DESCRIPTION:Ligue 1 McDonald's - Journée 19
+DESCRIPTION:Ligue 1 McDonald's - Journée 19\nItinéraire (Plans) : https://maps.apple.com/?q=Stade%20de%20l%27Abb%C3%A9%20Deschamps\nItinéraire (Google Maps) : https://www.google.com/maps/search/?api=1&query=Stade%20de%20l%27Abb%C3%A9%20Deschamps
 BEGIN:VALARM
 TRIGGER:-PT1H
 ACTION:DISPLAY
@@ -261,12 +261,12 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:d142b56800aef5fccb7020eb23bed2e6@asmonaco
-DTSTAMP:20260829T110324Z
+DTSTAMP:20260829T113554Z
 DTSTART;TZID=Europe/Paris:20270213T200000
 DTEND;TZID=Europe/Paris:20270213T220000
 SUMMARY:Toulouse FC vs AS Monaco
 LOCATION:Stadium de Toulouse
-DESCRIPTION:Ligue 1 McDonald's - Journée 20
+DESCRIPTION:Ligue 1 McDonald's - Journée 20\nItinéraire (Plans) : https://maps.apple.com/?q=Stadium%20de%20Toulouse\nItinéraire (Google Maps) : https://www.google.com/maps/search/?api=1&query=Stadium%20de%20Toulouse
 BEGIN:VALARM
 TRIGGER:-PT1H
 ACTION:DISPLAY
@@ -275,12 +275,12 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:d28fccdecbf84c2148ff0feba1c7356d@asmonaco
-DTSTAMP:20260829T110324Z
+DTSTAMP:20260829T113554Z
 DTSTART;TZID=Europe/Paris:20270220T200000
 DTEND;TZID=Europe/Paris:20270220T220000
 SUMMARY:AS Monaco vs Le Mans FC
 LOCATION:Stade Louis-II
-DESCRIPTION:Ligue 1 McDonald's - Journée 21
+DESCRIPTION:Ligue 1 McDonald's - Journée 21\nItinéraire (Plans) : https://maps.apple.com/?q=Stade%20Louis-II\nItinéraire (Google Maps) : https://www.google.com/maps/search/?api=1&query=Stade%20Louis-II
 BEGIN:VALARM
 TRIGGER:-PT1H
 ACTION:DISPLAY
@@ -289,12 +289,12 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:6299cb07e1b2583a4dd28a4e7a0f790d@asmonaco
-DTSTAMP:20260829T110324Z
+DTSTAMP:20260829T113554Z
 DTSTART;TZID=Europe/Paris:20270227T200000
 DTEND;TZID=Europe/Paris:20270227T220000
 SUMMARY:Stade Brestois 29 vs AS Monaco
 LOCATION:Stade Francis-Le Blé
-DESCRIPTION:Ligue 1 McDonald's - Journée 22
+DESCRIPTION:Ligue 1 McDonald's - Journée 22\nItinéraire (Plans) : https://maps.apple.com/?q=Stade%20Francis-Le%20Bl%C3%A9\nItinéraire (Google Maps) : https://www.google.com/maps/search/?api=1&query=Stade%20Francis-Le%20Bl%C3%A9
 BEGIN:VALARM
 TRIGGER:-PT1H
 ACTION:DISPLAY
@@ -303,12 +303,12 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:d6ce588d53a04a0764608abaa32abfca@asmonaco
-DTSTAMP:20260829T110324Z
+DTSTAMP:20260829T113554Z
 DTSTART;TZID=Europe/Paris:20270306T200000
 DTEND;TZID=Europe/Paris:20270306T220000
 SUMMARY:AS Monaco vs O. Lyonnais
 LOCATION:Stade Louis-II
-DESCRIPTION:Ligue 1 McDonald's - Journée 23
+DESCRIPTION:Ligue 1 McDonald's - Journée 23\nItinéraire (Plans) : https://maps.apple.com/?q=Stade%20Louis-II\nItinéraire (Google Maps) : https://www.google.com/maps/search/?api=1&query=Stade%20Louis-II
 BEGIN:VALARM
 TRIGGER:-PT1H
 ACTION:DISPLAY
@@ -317,12 +317,12 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:27743c2d2a3661bf6303531e60910e30@asmonaco
-DTSTAMP:20260829T110324Z
+DTSTAMP:20260829T113554Z
 DTSTART;TZID=Europe/Paris:20270313T200000
 DTEND;TZID=Europe/Paris:20270313T220000
 SUMMARY:O. Marseille vs AS Monaco
 LOCATION:Orange Vélodrome
-DESCRIPTION:Ligue 1 McDonald's - Journée 24
+DESCRIPTION:Ligue 1 McDonald's - Journée 24\nItinéraire (Plans) : https://maps.apple.com/?q=Orange%20V%C3%A9lodrome\nItinéraire (Google Maps) : https://www.google.com/maps/search/?api=1&query=Orange%20V%C3%A9lodrome
 BEGIN:VALARM
 TRIGGER:-PT1H
 ACTION:DISPLAY
@@ -331,12 +331,12 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:496bee3b2660a75153a3fc3ecc94995c@asmonaco
-DTSTAMP:20260829T110324Z
+DTSTAMP:20260829T113554Z
 DTSTART;TZID=Europe/Paris:20270320T200000
 DTEND;TZID=Europe/Paris:20270320T220000
 SUMMARY:AS Monaco vs Le Havre AC
 LOCATION:Stade Louis-II
-DESCRIPTION:Ligue 1 McDonald's - Journée 25
+DESCRIPTION:Ligue 1 McDonald's - Journée 25\nItinéraire (Plans) : https://maps.apple.com/?q=Stade%20Louis-II\nItinéraire (Google Maps) : https://www.google.com/maps/search/?api=1&query=Stade%20Louis-II
 BEGIN:VALARM
 TRIGGER:-PT1H
 ACTION:DISPLAY
@@ -345,12 +345,12 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:ce0158c932e2c893ea5b1554298e0952@asmonaco
-DTSTAMP:20260829T110324Z
+DTSTAMP:20260829T113554Z
 DTSTART;TZID=Europe/Paris:20270403T200000
 DTEND;TZID=Europe/Paris:20270403T220000
 SUMMARY:Angers SCO vs AS Monaco
 LOCATION:Stade Raymond Kopa
-DESCRIPTION:Ligue 1 McDonald's - Journée 26
+DESCRIPTION:Ligue 1 McDonald's - Journée 26\nItinéraire (Plans) : https://maps.apple.com/?q=Stade%20Raymond%20Kopa\nItinéraire (Google Maps) : https://www.google.com/maps/search/?api=1&query=Stade%20Raymond%20Kopa
 BEGIN:VALARM
 TRIGGER:-PT1H
 ACTION:DISPLAY
@@ -359,12 +359,12 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f8c509e7484c3104538d83e2dd52fb39@asmonaco
-DTSTAMP:20260829T110324Z
+DTSTAMP:20260829T113554Z
 DTSTART;TZID=Europe/Paris:20270410T200000
 DTEND;TZID=Europe/Paris:20270410T220000
 SUMMARY:AS Monaco vs Stade Rennais FC
 LOCATION:Stade Louis-II
-DESCRIPTION:Ligue 1 McDonald's - Journée 27
+DESCRIPTION:Ligue 1 McDonald's - Journée 27\nItinéraire (Plans) : https://maps.apple.com/?q=Stade%20Louis-II\nItinéraire (Google Maps) : https://www.google.com/maps/search/?api=1&query=Stade%20Louis-II
 BEGIN:VALARM
 TRIGGER:-PT1H
 ACTION:DISPLAY
@@ -373,12 +373,12 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:47f80fbc0744b38426a5522a066ce2bb@asmonaco
-DTSTAMP:20260829T110324Z
+DTSTAMP:20260829T113554Z
 DTSTART;TZID=Europe/Paris:20270417T200000
 DTEND;TZID=Europe/Paris:20270417T220000
 SUMMARY:AS Monaco vs RC Strasbourg
 LOCATION:Stade Louis-II
-DESCRIPTION:Ligue 1 McDonald's - Journée 28
+DESCRIPTION:Ligue 1 McDonald's - Journée 28\nItinéraire (Plans) : https://maps.apple.com/?q=Stade%20Louis-II\nItinéraire (Google Maps) : https://www.google.com/maps/search/?api=1&query=Stade%20Louis-II
 BEGIN:VALARM
 TRIGGER:-PT1H
 ACTION:DISPLAY
@@ -387,12 +387,12 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:0b4898926e4ee2a219cff13e0a9ca63f@asmonaco
-DTSTAMP:20260829T110324Z
+DTSTAMP:20260829T113554Z
 DTSTART;TZID=Europe/Paris:20270424T200000
 DTEND;TZID=Europe/Paris:20270424T220000
 SUMMARY:Lille OSC vs AS Monaco
 LOCATION:Decathlon Arena - Stade Pierre-Mauroy
-DESCRIPTION:Ligue 1 McDonald's - Journée 29
+DESCRIPTION:Ligue 1 McDonald's - Journée 29\nItinéraire (Plans) : https://maps.apple.com/?q=Decathlon%20Arena%20-%20Stade%20Pierre-Mauroy\nItinéraire (Google Maps) : https://www.google.com/maps/search/?api=1&query=Decathlon%20Arena%20-%20Stade%20Pierre-Mauroy
 BEGIN:VALARM
 TRIGGER:-PT1H
 ACTION:DISPLAY
@@ -401,12 +401,12 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:cc6bfcdef6080815733956461330df45@asmonaco
-DTSTAMP:20260829T110324Z
+DTSTAMP:20260829T113554Z
 DTSTART;TZID=Europe/Paris:20270501T200000
 DTEND;TZID=Europe/Paris:20270501T220000
 SUMMARY:AS Monaco vs FC Lorient
 LOCATION:Stade Louis-II
-DESCRIPTION:Ligue 1 McDonald's - Journée 30
+DESCRIPTION:Ligue 1 McDonald's - Journée 30\nItinéraire (Plans) : https://maps.apple.com/?q=Stade%20Louis-II\nItinéraire (Google Maps) : https://www.google.com/maps/search/?api=1&query=Stade%20Louis-II
 BEGIN:VALARM
 TRIGGER:-PT1H
 ACTION:DISPLAY
@@ -415,12 +415,12 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:7a2d567282839a792fa50bc48a9ccb9e@asmonaco
-DTSTAMP:20260829T110324Z
+DTSTAMP:20260829T113554Z
 DTSTART;TZID=Europe/Paris:20270508T200000
 DTEND;TZID=Europe/Paris:20270508T220000
 SUMMARY:RC Lens vs AS Monaco
 LOCATION:Stade Bollaert-Delelis
-DESCRIPTION:Ligue 1 McDonald's - Journée 31
+DESCRIPTION:Ligue 1 McDonald's - Journée 31\nItinéraire (Plans) : https://maps.apple.com/?q=Stade%20Bollaert-Delelis\nItinéraire (Google Maps) : https://www.google.com/maps/search/?api=1&query=Stade%20Bollaert-Delelis
 BEGIN:VALARM
 TRIGGER:-PT1H
 ACTION:DISPLAY
@@ -429,12 +429,12 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:b5f304f6d52bd7012f02f24c65e91aca@asmonaco
-DTSTAMP:20260829T110324Z
+DTSTAMP:20260829T113554Z
 DTSTART;TZID=Europe/Paris:20270516T200000
 DTEND;TZID=Europe/Paris:20270516T220000
 SUMMARY:AS Monaco vs Paris FC
 LOCATION:Stade Louis-II
-DESCRIPTION:Ligue 1 McDonald's - Journée 32
+DESCRIPTION:Ligue 1 McDonald's - Journée 32\nItinéraire (Plans) : https://maps.apple.com/?q=Stade%20Louis-II\nItinéraire (Google Maps) : https://www.google.com/maps/search/?api=1&query=Stade%20Louis-II
 BEGIN:VALARM
 TRIGGER:-PT1H
 ACTION:DISPLAY
@@ -443,12 +443,12 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:4b410d233da7144b844f913ed29d32d4@asmonaco
-DTSTAMP:20260829T110324Z
+DTSTAMP:20260829T113554Z
 DTSTART;TZID=Europe/Paris:20270522T200000
 DTEND;TZID=Europe/Paris:20270522T220000
 SUMMARY:OGC Nice vs AS Monaco
 LOCATION:Allianz Riviera
-DESCRIPTION:Ligue 1 McDonald's - Journée 33
+DESCRIPTION:Ligue 1 McDonald's - Journée 33\nItinéraire (Plans) : https://maps.apple.com/?q=Allianz%20Riviera\nItinéraire (Google Maps) : https://www.google.com/maps/search/?api=1&query=Allianz%20Riviera
 BEGIN:VALARM
 TRIGGER:-PT1H
 ACTION:DISPLAY
@@ -457,12 +457,12 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:d1e37174f4ebb263356cfceb8e402f50@asmonaco
-DTSTAMP:20260829T110324Z
+DTSTAMP:20260829T113554Z
 DTSTART;TZID=Europe/Paris:20270529T200000
 DTEND;TZID=Europe/Paris:20270529T220000
 SUMMARY:AS Monaco vs Estac Troyes
 LOCATION:Stade Louis-II
-DESCRIPTION:Ligue 1 McDonald's - Journée 34
+DESCRIPTION:Ligue 1 McDonald's - Journée 34\nItinéraire (Plans) : https://maps.apple.com/?q=Stade%20Louis-II\nItinéraire (Google Maps) : https://www.google.com/maps/search/?api=1&query=Stade%20Louis-II
 BEGIN:VALARM
 TRIGGER:-PT1H
 ACTION:DISPLAY

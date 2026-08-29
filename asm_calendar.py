@@ -12,6 +12,7 @@ import html
 import hashlib
 import datetime as dt
 import urllib.request
+import urllib.parse
 
 URL = "https://www.asmonaco.com/fr/pros/calendrier"
 OUT = "asmonaco.ics"
@@ -90,6 +91,14 @@ def esc(s):
              .replace(",", "\\,").replace("\n", "\\n"))
 
 
+def itineraire_urls(stade):
+    # Plans (Apple Maps) en priorité, Google Maps en repli.
+    q = urllib.parse.quote(stade)
+    apple = f"https://maps.apple.com/?q={q}"
+    google = f"https://www.google.com/maps/search/?api=1&query={q}"
+    return apple, google
+
+
 def to_ics(events):
     now = dt.datetime.now(dt.timezone.utc).strftime("%Y%m%dT%H%M%SZ")
     L = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//tipsy//ASMonaco//FR",
@@ -98,12 +107,16 @@ def to_ics(events):
          "X-PUBLISHED-TTL:PT12H"]
     for e in events:
         s = e["start"]; end = s + dt.timedelta(hours=2)
+        desc = e["desc"]
+        if e["location"]:
+            apple, google = itineraire_urls(e["location"])
+            desc += f"\nItinéraire (Plans) : {apple}\nItinéraire (Google Maps) : {google}"
         L += ["BEGIN:VEVENT", f"UID:{e['uid']}", f"DTSTAMP:{now}",
               f"DTSTART;TZID={TZ}:{s.strftime('%Y%m%dT%H%M%S')}",
               f"DTEND;TZID={TZ}:{end.strftime('%Y%m%dT%H%M%S')}",
               f"SUMMARY:{esc(e['summary'])}",
               f"LOCATION:{esc(e['location'])}",
-              f"DESCRIPTION:{esc(e['desc'])}",
+              f"DESCRIPTION:{esc(desc)}",
               "BEGIN:VALARM", "TRIGGER:-PT1H", "ACTION:DISPLAY",
               "DESCRIPTION:Match AS Monaco dans 1h", "END:VALARM", "END:VEVENT"]
     L.append("END:VCALENDAR")
