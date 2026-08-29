@@ -55,11 +55,21 @@ def fetch(url):
         return r.read().decode("utf-8", "replace")
 
 
+# Le site abrège certains noms ("O. MARSEILLE", "O. LYONNAIS") -> on les redéveloppe
+# en entier avant le title-casing habituel.
+NOMS_COMPLETS = {
+    "O. MARSEILLE": "Olympique de Marseille",
+    "O. LYONNAIS": "Olympique Lyonnais",
+}
+
+
 def title_case(t):
     # "AS MONACO" -> "AS Monaco" ; garde les sigles courts en majuscules
     t = html.unescape(t).strip()
     if t.upper() == "AS MONACO":
         return "AS Monaco"
+    if t.upper() in NOMS_COMPLETS:
+        return NOMS_COMPLETS[t.upper()]
     words = []
     for w in t.split():
         if len(w) <= 3 and w.isupper():      # OGC, PSG, RC, FC, OL...
